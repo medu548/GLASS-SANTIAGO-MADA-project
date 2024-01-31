@@ -30,6 +30,7 @@ The data source for this project is the Guttmacher Institute, which is a well-kn
 
 # Load and describe the data 
 ```{r}
+library(readr)
 library(here)
 AIUdata <- read_csv(here("data", "raw-data", "AIU All Women Dataset.csv"))
 dim(AIUdata)
@@ -53,6 +54,7 @@ There are 132 observations, one row for each low- to middle- income country, of 
   *These variables exist for two other age ranges (20-24 and 35-49), so we could analyze contraceptive usage across age categories too  
   
 2) How do the rates of safe abortions fluctuate with available methods for safe abortions?
+3) Are formerly married women more likely to use contraceptives?
 
 # How to analyze 
 All of the variables used in this analysis are numeric, so we can build linear regression models to analyze how each method of contraception affects the percentage of unintended pregnancies. We can group countries together based on the subregion variable to compare how these relationships vary across the world. There are other interesting variables that can be used for grouping for analysis such as wealth, urban/rural location, and marriage status. 
